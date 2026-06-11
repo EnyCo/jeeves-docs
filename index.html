@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeeves Assistant — Legal Documents</title>
+    <title>Jeeves Assistant — Documentation & Policies</title>
     <style>
         :root {
             --bg-color: #0f1115;
             --card-bg: #181b22;
             --text-main: #e3e6ed;
             --text-muted: #9fa6b2;
-            --accent-color: #5865f2;
+            --accent-color: #5865f2; /* Discord Blurple */
             --border-color: #2c313c;
             --max-width: 800px;
         }
@@ -21,12 +21,8 @@
             padding: 0;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.6;
@@ -38,38 +34,61 @@
             margin: 0 auto;
         }
 
-        header {
+        /* Hero Header with logo */
+        .hero-header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 20px;
+        }
+
+        .main-logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
         }
 
         h1 {
             color: #fff;
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             margin-bottom: 10px;
         }
 
-        h2 {
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Section Card styling */
+        .section-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .main-section-title {
             color: #fff;
-            font-size: 1.5rem;
-            margin-top: 10px;
-            margin-bottom: 15px;
-            border-left: 4px solid var(--accent-color);
-            padding-left: 12px;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
         }
 
         h3 {
             color: #fff;
-            font-size: 1.1rem;
-            margin-top: 20px;
+            font-size: 1.2rem;
+            margin-top: 25px;
             margin-bottom: 10px;
         }
 
         p, ul {
             color: var(--text-muted);
             margin-bottom: 15px;
+            font-size: 1rem;
         }
 
         ul {
@@ -80,59 +99,18 @@
             margin-bottom: 8px;
         }
 
-        .nav-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-            position: sticky;
-            top: 10px;
-            z-index: 100;
-        }
-
-        .btn {
-            background-color: var(--accent-color);
-            color: #fff;
-            padding: 10px 20px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            border-radius: 6px;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-            border: none;
-            transition: background 0.2s;
-        }
-
-        .btn:hover {
-            background-color: #4752c4;
-        }
-
-        .section-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 30px;
-            margin-bottom: 40px;
-        }
-
-        .hero-section {
-            text-align: center;
-            padding: 20px 10px;
-        }
-
         .last-updated {
             font-style: italic;
             color: var(--text-muted);
             font-size: 0.9rem;
+            margin-top: -15px;
             margin-bottom: 25px;
             display: block;
         }
 
         footer {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 50px;
             color: var(--text-muted);
             font-size: 0.85rem;
             border-top: 1px solid var(--border-color);
@@ -140,40 +118,32 @@
         }
 
         @media (max-width: 600px) {
-            .nav-container { flex-direction: column; width: 100%; }
-            .btn { width: 100%; }
+            body { padding: 20px 10px; }
+            .section-card { padding: 25px 20px; }
+            h1 { font-size: 2rem; }
+            .main-section-title { font-size: 1.6rem; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <header id="home">
+    <header class="hero-header">
+        <svg class="main-logo" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <path d="M112.5 112.5 H287.5 V399.5 C287.5 454.5 233.5 499.5 112.5 499.5 S 0 454.5 0 399.5 V 324.5 C0 300.5 24 300.5 24 324.5 V 399.5 C24 430.5 68.5 475.5 112.5 475.5 S 201 430.5 201 399.5 V 136.5 H 112.5 V 201.5 C112.5 225.5 88.5 225.5 88.5 201.5 V 112.5 Z M201 112.5 V 399.5 C201 430.5 156.5 475.5 112.5 475.5 S 24 430.5 24 399.5 V 136.5 H 112.5 V 112.5 Z" fill="#fff"/>
+            <circle cx="177" cy="225" r="24" fill="#fff"/>
+            <circle cx="391" cy="113" r="56" fill="#fff"/>
+            <circle cx="391" cy="289" r="41" fill="#fff"/>
+            <circle cx="330" cy="378" r="28" fill="#fff"/>
+        </svg>
         <h1>Jeeves</h1>
-        <p>Your Personal Discord Assistant</p>
+        <p class="hero-subtitle">Official Terms of Service and Privacy Policy for the Jeeves Personal Assistant for Discord.</p>
     </header>
 
-    <div class="nav-container">
-        <a href="#home" class="btn">Home</a>
-        <a href="#tos" class="btn">Terms of Service</a>
-        <a href="#privacy" class="btn">Privacy Policy</a>
-    </div>
-
-    <div class="section-card hero-section">
-        <h2 style="border: none; padding: 0; font-size: 2rem;">Hello, I'm Jeeves</h2>
-        <p style="font-size: 1.1rem; max-width: 600px; margin: 15px auto 25px auto;">
-            An intelligent personal assistant built for Discord servers, designed to manage tasks, remember context, and optimize workflows seamlessly.
-        </p>
-        <div>
-            <a href="#tos" class="btn" style="background-color: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-main);">View Terms</a>
-            <a href="#privacy" class="btn" style="background-color: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-main);">View Privacy</a>
-        </div>
-    </div>
-
-    <div id="tos" class="section-card">
+    <div class="section-card">
+        <h2 class="main-section-title">Terms of Service</h2>
         <span class="last-updated">Last Updated: June 11, 2026</span>
-        <h2>Terms of Service</h2>
-        <p>Welcome to Jeeves. By adding this bot to your Discord server or interacting with it, you agree to comply with and be bound by the following Terms of Service.</p>
+        <p>Welcome to Jeeves. By adding this bot to your Discord server or interacting with it, you agree to comply with and be bound by the following Terms of Service. Please read them carefully.</p>
 
         <h3>1. Acceptance of Terms</h3>
         <p>By installing, accessing, or using Jeeves, you signify your agreement to these Terms. If you do not agree to all of these terms, do not install or interact with the bot.</p>
@@ -182,22 +152,22 @@
         <p>Jeeves is an artificial intelligence-driven personal assistant bot operated inside the Discord ecosystem. Services include automation features, organization tracking, long-term memory personalization capabilities powered by backend databases, and interactive tools.</p>
 
         <h3>3. Discord Terms of Service</h3>
-        <p>Users must comply with the official Discord Terms of Service and Community Guidelines at all times while interacting with Jeeves.</p>
+        <p>Users must comply with the official Discord Terms of Service and Community Guidelines at all times while interacting with Jeeves. Any usage that violates Discord's policies will result in immediate termination of access to the bot.</p>
 
         <h3>4. User Conduct and Restrictions</h3>
-        <p>You agree not to use Jeeves to harass individuals, transmit illegal content, or attempt to reverse engineer or flood the bot's processing infrastructure.</p>
+        <p>You agree not to use Jeeves to harass individuals, transmit illegal content, transmit sexually explicit material, or attempt to reverse engineer, disrupt, exploit, or flood the bot's processing infrastructure.</p>
 
         <h3>5. Monetization</h3>
         <p>Certain components or advanced configurations of Jeeves may require payment through Discord's internal sales system. All purchases are bound by Discord's subscription terms.</p>
 
         <h3>6. Disclaimer of Warranties</h3>
-        <p>Jeeves is provided on an "as is" basis. The developers make no warranties regarding the absolute accuracy of responses generated by the artificial intelligence engine.</p>
+        <p>Jeeves is provided on an "as is" basis. The developers make no warranties regarding the continuous availability, error-free execution, or absolute accuracy of responses generated by the artificial intelligence engine.</p>
     </div>
 
-    <div id="privacy" class="section-card">
+    <div class="section-card">
+        <h2 class="main-section-title">Privacy Policy</h2>
         <span class="last-updated">Last Updated: June 11, 2026</span>
-        <h2>Privacy Policy</h2>
-        <p>Your privacy is fundamentally important to us. This Privacy Policy details the types of information Jeeves collects and processes.</p>
+        <p>Your privacy is fundamentally important to us. This Privacy Policy details the types of information Jeeves collects, how it is processed, and stored.</p>
 
         <h3>1. Information We Collect</h3>
         <ul>
@@ -207,7 +177,7 @@
         </ul>
 
         <h3>2. How We Use Information</h3>
-        <p>Collected information is used strictly to execute user-triggered automation routines and to retrieve conversational contextual markers via vector embeddings for personalized responses.</p>
+        <p>Collected information is used strictly to operate and enhance Jeeves' core functionalities: to execute user-triggered automation routines and to retrieve conversational contextual markers via vector embeddings for personalized responses.</p>
 
         <h3>3. Data Retention and Storage</h3>
         <p>Memory banking records remain stored securely in isolated databases until an account deletion is requested. Transient cache data is automatically purged inside short-term system windows.</p>
