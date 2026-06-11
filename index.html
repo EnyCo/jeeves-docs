@@ -3,10 +3,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeeves Assistant</title>
+    <title>Jeeves Assistant — Legal Documents & Home</title>
+    <style>
+        :root {
+            --bg-color: #0f1115;
+            --card-bg: #181b22;
+            --text-main: #e3e6ed;
+            --text-muted: #9fa6b2;
+            --accent-color: #5865f2; /* Discord Blurple */
+            --accent-hover: #4752c4;
+            --border-color: #2c313c;
+            --max-width: 800px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 12px;
+        }
+
+        h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p, ul {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Navigation Buttons */
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: var(--border-color);
+            border-color: var(--text-muted);
+        }
+
+        .btn.active {
+            background-color: var(--accent-color);
+            color: #fff;
+            border-color: var(--accent-color);
+        }
+
+        .btn.active:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Views management */
+        .view {
+            display: none;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .view.active-view {
+            display: block;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 40px 10px;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        .last-updated {
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 10px;
+            }
+            .view {
+                padding: 20px 15px;
+            }
+            .nav-container {
+                flex-direction: column;
+                width: 100%;
+            }
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Jeeves</h1>
-    <p>Privacy Policy and Terms of Service coming soon.</p>
-</body>
-</html>
+
+<div class="container">
+    <header>
+        <h1>Jeeves</h1>
+        <p>Your Personal Discord Assistant</p>
+    </header>
+
+    <div class="nav-container">
+        <button class="btn active" onclick="switchView('home', this)">Home</button>
+        <button class="btn" onclick="switchView('tos', this)">Terms of Service</button>
+        <button class="btn" onclick="switchView('privacy', this)">Privacy Policy</button>
+    </div>
+
+    <div id="home" class="view active-view">
+        <div class="hero-section">
+            <h2 class="hero-title" style="border: none; padding: 0;">Hello, I'm Jeeves</h2>
+            <p class="hero-subtitle">An intelligent personal assistant built for Discord servers, designed to manage tasks, remember context, and optimize workflows seamlessly.</p>
+            <div style="margin-top: 20px;">
+                <button class="btn active" onclick="document.querySelectorAll('.btn')[1].click()">Read Terms of Service</button>
+                <button class="btn active" onclick="document.querySelectorAll('.btn')[2].click()">Read Privacy Policy</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="tos" class="view">
+        <span class="last-updated">Last Updated: June 11, 2026</span>
+        <h2>Terms of Service</h2>
+        <p>Welcome to Jeeves. By adding this bot to your Discord server or interacting with it, you agree to comply with and be bound by the following Terms of Service. Please read them carefully.</p>
+
+        <h3>1. Acceptance of Terms</h3>
+        <p>By installing, accessing, or using Jeeves, you signify your agreement to these Terms. If you do not agree to all of these terms, do not install or interact with the bot.</p>
+
+        <h3>2. Description of Service</h3>
+        <p>Jeeves is an artificial intelligence-driven personal assistant bot operated inside the Discord ecosystem. Services include automation features, organization tracking, long-term memory personalization capabilities powered by backend databases, and interactive tools.</p>
+
+        <h3>3. Discord Terms of Service</h3>
+        <p>Users must comply with the official Discord Terms of Service and Community Guidelines at all times while interacting with Jeeves. Any usage that violates Discord's policies will result in immediate termination of access to the bot.</p>
+
+        <h3>4. User Conduct and Restrictions</h3>
+        <p>You agree not to use Jeeves to:</p>
+        <ul>
+            <li>Harass, abuse, stalk, or threaten individuals or communities.</li>
+            <li>Transmit, store, or query content that is illegal, harmful, or sexually explicit.</li>
+            <li>Attempt to reverse engineer, disrupt, exploit, or flood the bot's processing infrastructure.</li>
+            <li>Scrape data systematically from the system without authorized consent.</li>
+        </ul>
+
+        <h3>5. Monetization and Premium Features</h3>
+        <p>Certain components or advanced configurations of Jeeves may require payment through Discord's internal sales system or third-party verified gateways. All purchases are bound by Discord's subscription terms, and refunds are handled according to platform-wide policies.</p>
+
+        <h3>6. Disclaimer of Warranties</h3>
+        <p>Jeeves is provided on an "as is" and "as available" basis. The developers make no warranties, expressed or implied, regarding the continuous availability, error-free execution, or absolute accuracy of responses generated by the artificial intelligence engine.</p>
+
+        <h3>7. Limitation of Liability</h3>
+        <p>In no event shall the developers of Jeeves be held liable for any indirect, incidental, special, consequential, or punitive damages arising out of your utilization or inability to access the service.</p>
+
+        <h3>8. Modifications to Terms</h3>
+        <p>We reserve the right to modify these Terms at any time. Continued usage of the bot following adjustments constitutes acceptance of the updated terms.</p>
+    </div>
+
+    <div id="privacy" class="view">
+        <span class="last-updated">Last Updated: June 11, 2026</span>
+        <h2>Privacy Policy</h2>
+        <p>Your privacy is fundamentally important to us. This Privacy Policy details the types of information Jeeves collects, how it is processed, stored, and the rights you retain over your data.</p>
+
+        <h3>1. Information We Collect</h3>
+        <p>To provide personal assistant capabilities, Jeeves collects and processes minimal necessary parameters, including:</p>
+        <ul>
+            <li><strong>Discord Meta Data:</strong> User IDs, username strings, server/guild IDs, and channel IDs to route commands correctly.</li>
+            <li><strong>User Interaction Input:</strong> Text commands, explicit queries, and custom configurations submitted directly to the bot.</li>
+            <li><strong>Long-Term Memory Data:</strong> Personal facts or context explicitly provided by users to build an ongoing personalized assistant pipeline, stored securely using backend vector databases.</li>
+        </ul>
+
+        <h3>2. How We Use Information</h3>
+        <p>Collected information is used strictly to operate and enhance Jeeves' core functionalities:</p>
+        <ul>
+            <li>To execute user-triggered automation routines and system features.</li>
+            <li>To retrieve conversational contextual markers via vector embeddings for personalized assistant responses.</li>
+            <li>To manage premium tiers, client licensing validation, and usage thresholds safely.</li>
+        </ul>
+
+        <h3>3. Data Retention and Storage</h3>
+        <p>We retain data only as long as necessary to fulfill the operational requirements of the service:</p>
+        <ul>
+            <li>Memory banking records remain stored securely in isolated relational/vector databases until an account deletion is requested.</li>
+            <li>Transient cache data handled via interaction pipelines is deleted automatically within regular short-term system windows.</li>
+        </ul>
+
+        <h3>4. Third-Party Services</h3>
+        <p>Jeeves utilizes verified secure API infrastructure partners to process specific advanced modules (such as text embeddings or remote secure hosting engines like Supabase). Data sent to third parties is restricted strictly to procedural execution blocks and is never shared, sold, or packaged for marketing purposes.</p>
+
+        <h3>5. Data Erasure and Control</h3>
+        <p>You maintain full authority over your data. If you wish to purge saved personalization records or delete contextual history stored within Jeeves' vector memory banks, you can issue the internal cleanup commands directly inside Discord or contact developer support for immediate database erasure.</p>
+
+        <h3>6. Security Measures</h3>
+        <p>We employ standard electronic security protocols to guard your underlying records from unapproved disclosure, alteration, or destructive access breaches.</p>
+
+        <h3>7. Contact Information</h3>
+        <p>For inquiries, support requests, or data privacy adjustment questions regarding Jeeves, please contact support within our community server infrastructure.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Jeeves Assistant. All rights reserved.</p>
+    </footer>
+</div>
+
+<script>
+    function switchView(viewId, clickedButton) {
+        // Hide all views
+        const views = document.querySelectorAll('.view');
+        views.forEach(view => view.classList.remove('active-view'));
+
+        // Remove active class from all buttons
+        const buttons = document.querySelectorAll('.nav-container .btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        // Show selected view
+        document.getElementById(viewId).classList.add('active-view');
+
+        // Add active class to either the clicked navbar button, or match it
+        if (clickedButton && clickedButton.parentNode.classList.contains('nav-container')) {
+            clickedButton.classList.add('active');
+        } else {
+            // If navigated via hero section buttons, find matching top nav bar button
+            const navButtons = document.querySelectorAll('.nav-container .btn');
+            if (viewId ===
