@@ -3,219 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeeves Assistant — Documentation & Policies</title>
+    <title>Jeeves Bot - Terms of Service & Privacy Policy</title>
     <style>
-        :root {
-            --bg-color: #0f1115;
-            --card-bg: #181b22;
-            --text-main: #e3e6ed;
-            --text-muted: #9fa6b2;
-            --accent-color: #5865f2; /* Discord Blurple */
-            --border-color: #2c313c;
-            --max-width: 800px;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
             line-height: 1.6;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: var(--max-width);
+            color: #333;
+            max-width: 800px;
             margin: 0 auto;
+            padding: 2rem 1.5rem;
         }
-
-        /* Hero Header with logo */
-        .hero-header {
-            text-align: center;
-            margin-bottom: 50px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid var(--border-color);
+        h1 { border-bottom: 2px solid #eee; padding-bottom: 0.5rem; color: #111; }
+        h2 { margin-top: 2rem; color: #222; border-bottom: 1px solid #eee; padding-bottom: 0.25rem; }
+        h3 { margin-top: 1.5rem; color: #444; }
+        p, li { color: #4a4a4a; }
+        ul { padding-left: 1.5rem; }
+        .last-updated { font-style: italic; color: #666; margin-bottom: 2rem; }
+        .highlight-box { 
+            background-color: #f9f9f9; 
+            border-left: 4px solid #0066cc; 
+            padding: 1rem; 
+            margin: 1.5rem 0; 
+            border-radius: 0 4px 4px 0;
         }
-
-       .main-logo {
-            width: 120px;
-            height: 120px;
-            object-fit: contain;
-            margin-bottom: 20px;
-            mix-blend-mode: screen; /* This removes the white box instantly */
-        }
-
-        h1 {
-            color: #fff;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Section Card styling */
-        .section-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 40px;
-            margin-bottom: 40px;
-        }
-
-        .main-section-title {
-            color: #fff;
-            font-size: 2rem;
-            margin-bottom: 25px;
-            border-left: 5px solid var(--accent-color);
-            padding-left: 15px;
-        }
-
-        h3 {
-            color: #fff;
-            font-size: 1.2rem;
-            margin-top: 25px;
-            margin-bottom: 10px;
-        }
-
-        p, ul {
-            color: var(--text-muted);
-            margin-bottom: 15px;
-            font-size: 1rem;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        .last-updated {
-            font-style: italic;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-top: -15px;
-            margin-bottom: 25px;
-            display: block;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            border-top: 1px solid var(--border-color);
-            padding-top: 20px;
-        }
-
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 600px) {
-            body { padding: 20px 10px; }
-            .section-card { padding: 25px 20px; }
-            h1 { font-size: 2rem; }
-            .main-section-title { font-size: 1.6rem; }
-        }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f5f5f5; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header class="hero-header">
-        <img src="logo.png" alt="Jeeves Logo" class="main-logo">
-        <h1>Jeeves</h1>
-        <p class="hero-subtitle">Official Terms of Service and Privacy Policy for the Jeeves Personal Assistant for Discord.</p>
-    </header>
+    <h1>Jeeves Bot - Legal Documentation</h1>
+    <p class="last-updated">Last Updated: June 11, 2026</p>
 
-    <div class="section-card">
-        <h2 class="main-section-title">Terms of Service</h2>
-        <span class="last-updated">Last Updated: June 11, 2026</span>
-        <p>Welcome to Jeeves. By adding this bot to your Discord server or interacting with it, you agree to comply with and be bound by the following Terms of Service. Please read them carefully.</p>
+    <hr>
 
-        <h3>1. Acceptance of Terms</h3>
-        <p>By installing, accessing, or using Jeeves, you signify your agreement to these Terms. If you do not agree to all of these terms, do not install or interact with the bot.</p>
+    <h2>Terms of Service</h2>
+    
+    <h3>1. Acceptance of Terms</h3>
+    <p>By invoking the Jeeves Discord bot (via the <code>/ask</code> slash command, direct messages, or other interaction models), you agree to be bound by these Terms of Service. If you do not agree, please remove the bot from your server or cease interactions with it.</p>
 
-        <h3>2. Description of Service</h3>
-        <p>Jeeves is an artificial intelligence-driven personal assistant bot operated inside the Discord ecosystem. Services include automation features, organization tracking, long-term memory personalization capabilities powered by backend databases, and interactive tools.</p>
+    <h3>2. Description of Service</h3>
+    <p>Jeeves is an artificial intelligence-powered assistant that leverages third-party large language models to provide contextual answers, chat continuity, and long-term memory features across Discord servers and direct messages.</p>
 
-        <h3>3. Discord Terms of Service</h3>
-        <p>Users must comply with the official Discord Terms of Service and Community Guidelines at all times while interacting with Jeeves. Any usage that violates Discord's policies will result in immediate termination of access to the bot.</p>
+    <h3>3. Availability and Disclaimers</h3>
+    <p>The service is provided on an "as-is" and "as-available" basis. The bot's operator makes no guarantees regarding continuous uptime, API availability from external vendors, or the flawless performance of specific commands (such as data clearing utilities). Underlying storage layers may experience temporary infrastructure outages, during which certain bot features may degrade or fail gracefully.</p>
 
-        <h3>4. User Conduct and Restrictions</h3>
-        <p>You agree not to use Jeeves to harass individuals, transmit illegal content, transmit sexually explicit material, or attempt to reverse engineer, disrupt, exploit, or flood the bot's processing infrastructure.</p>
+    <hr>
 
-        <h3>5. Monetization</h3>
-        <p>Certain components or advanced configurations of Jeeves may require payment through Discord's internal sales system. All purchases are bound by Discord's subscription terms.</p>
+    <h2>Privacy Policy</h2>
 
-        <h3>6. Disclaimer of Warranties</h3>
-        <p>Jeeves is provided on an "as is" basis. The developers make no warranties regarding the continuous availability, error-free execution, or absolute accuracy of responses generated by the artificial intelligence engine.</p>
+    <h3>1. Data We Collect and Process</h3>
+    <p>To provide chat responses and remember context, Jeeves processes and stores the following specific data points:</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Data Type</th>
+                <th>Storage Duration</th>
+                <th>Operational Purpose</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Discord User ID</strong></td>
+                <td>Indefinite (Until deleted)</td>
+                <td>The primary unique numeric identifier used to route messages, apply rate limits, and safely isolate long-term memories.</td>
+            </tr>
+            <tr>
+                <td><strong>Discord Channel ID</strong></td>
+                <td>Temporary (Up to 48 hours)</td>
+                <td>Cached temporarily inside automated session keys to isolate and maintain short-term chat history threads within specific public channels.</td>
+            </tr>
+            <tr>
+                <td><strong>Message & Reply Text</strong></td>
+                <td>Temporary (Up to 48 hours)</td>
+                <td>Short-term conversation history is truncated to a maximum of 500 characters per turn and automatically expires after 48 hours of thread inactivity.</td>
+            </tr>
+            <tr>
+                <td><strong>Extracted Facts & Vectors</strong></td>
+                <td>Indefinite (Until deleted)</td>
+                <td>Synthesized third-person facts extracted from your text by AI, alongside mathematical vector embeddings, to provide long-term personalized context. Raw prompts are not stored here.</td>
+            </tr>
+        </tbody>
+    </table>
 
-        <h3>7. Limitation of Liability & Indemnification</h3>
-        <p>To the maximum extent permitted by law, the developers of Jeeves shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or operational use resulting from bot downtime, AI generation inaccuracies, or database disruptions. You agree to indemnify and hold harmless the developers from any claims arising out of your misuse of the service.</p>
-
-        <h3>8. Modifications to Service and Terms</h3>
-        <p>We reserve the right to modify, suspend, or discontinue any part of Jeeves' functionality at any time. We may also revise these Terms of Service. Continued interaction with the bot following updates indicates full acceptance of the new framework.</p>
-
-        <h3>9. Governing Law</h3>
-        <p>These Terms shall be governed by and construed in accordance with the laws of your local country or state jurisdiction, without regard to its conflict of law provisions.</p>
+    <div class="highlight-box">
+        <strong>Crucial Disclosure regarding Cross-Context Memory:</strong> 
+        Long-term facts extracted by Jeeves follow your specific Discord User ID across different channels, servers, and direct message scopes. Insights or context learned during a conversation in one server or a private DM window may inform and contextualize the replies Jeeves generates for you in an entirely different server environment.
     </div>
 
-    <div class="section-card">
-        <h2 class="main-section-title">Privacy Policy</h2>
-        <span class="last-updated">Last Updated: June 11, 2026</span>
-        <p>Your privacy is fundamentally important to us. This Privacy Policy details the types of information Jeeves collects, how it is processed, and stored.</p>
+    <h3>2. Third-Party Data Processors</h3>
+    <p>Jeeves passes conversation text, cached history, and extracted facts to <strong>Google Gemini API</strong> endpoints to generate chat completions and produce mathematical vector embeddings. Data shared with third-party APIs is governed by their respective developer policies. Jeeves does not collect or store your Discord username, display name, email, IP address, or payment details.</p>
 
-        <h3>1. Information We Collect</h3>
-        <ul>
-            <li><strong>Discord Meta Data:</strong> User IDs, username strings, server IDs, and channel IDs to route commands correctly.</li>
-            <li><strong>User Interaction Input:</strong> Text commands and configurations submitted directly to the bot.</li>
-            <li><strong>Long-Term Memory Data:</strong> Personal facts explicitly provided by users to build an ongoing personalized assistant pipeline, stored securely using backend vector databases.</li>
-        </ul>
+    <h3>3. User Controls and Deletion Rights</h3>
+    <p>You maintain control over your data via the native <code>/forget-me confirm:True</code> slash command. Executing this command triggers a routine that wipes your temporary chat history caches, clears your rate-limiting state, and purges all long-term vector facts associated with your Discord User ID.</p>
 
-        <h3>2. How We Use Information</h3>
-        <p>Collected information is used strictly to operate and enhance Jeeves' core functionalities: to execute user-triggered automation routines and to retrieve conversational contextual markers via vector embeddings for personalized responses. We do not sell or lease your personal data to third parties.</p>
-
-        <h3>3. AI Processing and Third-Party Infrastructure</h3>
-        <p>To provide advanced conversational capabilities, text strings submitted to Jeeves are processed through secure Large Language Model (LLM) APIs and maintained via protected cloud database providers. These sub-processors are prohibited from using your data to train public baseline models and must handle it in compliance with standard data protection policies.</p>
-
-        <h3>4. Data Retention and Storage</h3>
-        <p>Memory banking records remain stored securely in isolated databases until an account deletion is requested. Transient cache data and localized system states are automatically purged inside short-term system windows.</p>
-
-        <h3>5. Data Erasure and Control</h3>
-        <p>You maintain full authority over your data. If you wish to purge saved personalization records stored within Jeeves' vector memory banks, you can issue the internal cleanup commands directly inside Discord. Upon trigger, backend tasks will completely delete your associated vector coordinates and contextual data payloads from our databases.</p>
-
-        <h3>6. Security Measures</h3>
-        <p>We employ standard operational encryption protocols to protect your data during transmission and while stored at rest. Access tokens, credentials, and user data vectors are tightly isolated to prevent external exposure.</p>
-
-        <h3>7. Children's Privacy</h3>
-        <p>Jeeves is not directed at or intended for children under the age of 13. We do not knowingly collect personal information from children. If we discover that a child under 13 has provided data, we will immediately execute background tasks to purge it.</p>
-
-        <h3>8. Contact and Support</h3>
-        <p>If you have any questions regarding these policies or wish to request an administrative manual data deletion, please contact us at [YOUR EMAIL ADDRESS OR DISCORD SUPPORT SERVER LINK].</p>
+    <div class="highlight-box">
+        <strong>Infrastructure Outage Disclaimer:</strong> 
+        Data deletion routines rely on the live availability of our underlying database containers. In the event of an infrastructure error or database timeout, the deletion pipeline may fail to execute fully to preserve system stability, leaving short-term cached data or rate limits temporarily intact. If you encounter an error message while executing a wipe, please contact the system operator to process your request manually.
     </div>
 
-    <footer>
-        <p>&copy; 2026 Jeeves Assistant. All rights reserved.</p>
-    </footer>
-</div>
+    <h3>4. Contact Information</h3>
+    <p>For manual data privacy inquiries, deletion escalation requests, or technical support, please contact the bot operator at the designated technical contact point provided in the application's Discord directory profile.</p>
 
 </body>
 </html>
